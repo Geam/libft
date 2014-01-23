@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/17 12:02:06 by mdelage           #+#    #+#             */
-/*   Updated: 2013/12/24 19:56:06 by mdelage          ###   ########.fr       */
+/*   Updated: 2014/01/23 11:25:47 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	find_next_percent(char *str)
 	return (-1);
 }
 
-int		ft_printf(char *str, ...)
+int			ft_printf(char *str, ...)
 {
 	int		i;
 	int		ret;

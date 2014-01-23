@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/20 19:19:30 by mdelage           #+#    #+#             */
-/*   Updated: 2013/12/24 20:00:04 by mdelage          ###   ########.fr       */
+/*   Updated: 2014/01/23 11:26:56 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,17 @@ int		printf_fill_nbrlen(t_param *data, void *data_2)
 	else if (data->param & PARAM_U)
 		len = ft_nbrlen_long(*(unsigned int *)data_2, 0);
 	else if (data->param & PARAM_L &&
-			 (data->param & PARAM_D || data->param & PARAM_I))
+			(data->param & PARAM_D || data->param & PARAM_I))
 		len = ft_nbrlen_long(*(long *)data_2, 0);
 	else if (data->param & PARAM_O || data->param & PARAM_X ||
-			 data->param & PARAM_P)
+			data->param & PARAM_P)
 		len = ft_nbrlen_ulong(*(unsigned long *)data_2, 0);
 	if ((data->param & PARAM_WH || data->param & PARAM_PL) &&
 		*(long *)data_2 >= 0 && data->param & PARAM_L)
 		len++;
 	else if ((data->param & PARAM_WH || data->param & PARAM_PL) &&
-			 *(int *)data_2 >= 0 && !(data->param & PARAM_L))
-		len ++;
+			*(int *)data_2 >= 0 && !(data->param & PARAM_L))
+		len++;
 	return (min - len);
 }
 

@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/19 17:50:08 by mdelage           #+#    #+#             */
-/*   Updated: 2013/12/24 20:00:22 by mdelage          ###   ########.fr       */
+/*   Updated: 2014/01/23 11:28:42 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,14 @@ static int	which_param_sub(char c, int *cont, t_param *d, const char tab[20])
 	return (j);
 }
 
-int		which_param(char *str, t_param *data, int *shift, va_list *ap)
+int			which_param(char *str, t_param *data, int *shift, va_list *ap)
 {
 	int			i;
 	int			size;
 	int			cont;
 	const char	tab[22] = {'d', 'i', 'f', 'e', 'g', 'c', 'u', 'o', 'x', 'p',
-						   'X', 's', '%', 'h', 'l', '-', '+', '0', ' ', '.',
-						   '#', '*'};
+							'X', 's', '%', 'h', 'l', '-', '+', '0', ' ', '.',
+							'#', '*'};
 
 	i = 1;
 	cont = 1;

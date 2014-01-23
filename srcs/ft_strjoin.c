@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/25 16:44:55 by mdelage           #+#    #+#             */
-/*   Updated: 2013/12/03 10:55:03 by mdelage          ###   ########.fr       */
+/*   Updated: 2014/01/23 11:27:18 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	ft_joining(char *temp, const char *s, int s_s, int start)
 	}
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*temp;
 	int		s_s1;

@@ -6,14 +6,14 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/25 17:30:23 by mdelage           #+#    #+#             */
-/*   Updated: 2013/12/31 15:39:56 by mdelage          ###   ########.fr       */
+/*   Updated: 2014/01/23 11:27:47 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static char **ft_nb_word(char const *s, char c, char **tab)
+static char	**ft_nb_word(char const *s, char c, char **tab)
 {
 	int		i;
 	int		nb_word;
