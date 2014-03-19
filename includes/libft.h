@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 17:20:12 by mdelage           #+#    #+#             */
-/*   Updated: 2014/03/19 15:50:55 by mdelage          ###   ########.fr       */
+/*   Updated: 2014/03/19 16:08:01 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(const char *s1, const char *s2);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
+size_t	ft_tablen(char **tab);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		get_next_line(int const fd, char **line);
