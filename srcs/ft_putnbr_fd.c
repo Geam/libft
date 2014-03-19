@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/23 17:00:16 by mdelage           #+#    #+#             */
-/*   Updated: 2014/03/08 23:15:45 by mdelage          ###   ########.fr       */
+/*   Updated: 2014/03/19 19:13:22 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ size_t	ft_putnbr_fd(long n, int fd)
 	}
 	if (n >= 10)
 		len += ft_putnbr_fd(n / 10, fd);
-	return (ft_putchar_fd(n % 10 + '0', fd));
+	return (ft_putchar_fd(n % 10 + '0', fd) + len);
 }
