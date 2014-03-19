@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/16 20:02:54 by mdelage           #+#    #+#             */
-/*   Updated: 2014/03/16 20:02:56 by mdelage          ###   ########.fr       */
+/*   Updated: 2014/03/19 15:48:50 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static int	ft_nbword(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-		if ((i == 0 || s[i - 1] == c) && (s[i] != c && s[i]) )
+		if ((i == 0 || s[i - 1] == c) && (s[i] != c && s[i]))
 			nb_word++;
 		i++;
 	}

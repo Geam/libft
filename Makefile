@@ -6,7 +6,7 @@
 #    By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/03/08 23:09:11 by mdelage           #+#    #+#              #
-#    Updated: 2014/03/08 23:19:10 by mdelage          ###   ########.fr        #
+#    Updated: 2014/03/16 20:58:38 by mdelage          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -88,7 +88,8 @@ SRC = ft_atoi.c \
 	ft_strsub.c \
 	ft_strtrim.c \
 	ft_tolower.c \
-	ft_toupper.c
+	ft_toupper.c \
+	get_next_line.c
 
 HFILES = $(patsubst %,$(HPATH)/%, $(HEADER))
 CFILES = $(patsubst %,$(CPATH)/%, $(SRC))

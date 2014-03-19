@@ -6,17 +6,21 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 17:20:12 by mdelage           #+#    #+#             */
-/*   Updated: 2014/03/13 19:50:47 by mdelage          ###   ########.fr       */
+/*   Updated: 2014/03/16 20:57:04 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-/* include <string.h> for size_t */
+/*
+** include <string.h> for size_t
+*/
 # include <string.h>
 
-/* Definition of keyword for color used in ft_put[...]_c */
+/*
+** Definition of keyword for color used in ft_put[...]_c
+*/
 # define NORMAL "\x1B[0m"
 # define RED "\x1B[31m"
 # define GREEN "\x1B[32m"
@@ -85,7 +89,6 @@ int		ft_strequ(char const *s1, char const *s2);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strjoin_3(char const *s1, char const *s2, char const *s3);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 char	*ft_strmap(char const *s, char (*f)(char));
@@ -103,5 +106,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		get_next_line(int const fd, char **line);
 
 #endif /* !LIBFT_H */
