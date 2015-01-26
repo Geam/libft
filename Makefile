@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2014/03/08 23:09:11 by mdelage           #+#    #+#              #
-#    Updated: 2014/03/19 16:06:09 by mdelage          ###   ########.fr        #
+#    Created: 2014/05/18 21:43:21 by mdelage           #+#    #+#              #
+#    Updated: 2014/05/18 21:43:56 by mdelage          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -18,7 +18,6 @@ CC = /usr/bin/gcc
 MKDIR = /bin/mkdir
 RM = /bin/rm
 CFLAGS = -Wall -Wextra -Werror -I $(HPATH)
-LDFLAGS =
 
 NAME = libft.a
 AR = /usr/bin/ar
@@ -56,11 +55,13 @@ SRC = ft_atoi.c \
 	ft_putendl.c \
 	ft_putendl_c.c \
 	ft_putendl_fd.c \
+	ft_putendl_fd_c.c \
 	ft_putnbr.c \
 	ft_putnbr_fd.c \
 	ft_putstr.c \
 	ft_putstr_c.c \
 	ft_putstr_fd.c \
+	ft_putstr_fd_c.c \
 	ft_strcat.c \
 	ft_strchr.c \
 	ft_strclr.c \
@@ -95,8 +96,6 @@ SRC = ft_atoi.c \
 HFILES = $(patsubst %,$(HPATH)/%, $(HEADER))
 CFILES = $(patsubst %,$(CPATH)/%, $(SRC))
 OFILES = $(patsubst %.c,$(OPATH)/%.o, $(SRC))
-
-.PHONY: all clean fclean re
 
 all: $(OPATH) $(NAME)
 

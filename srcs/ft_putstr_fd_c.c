@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putstr_fd_c.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 19:02:43 by mdelage           #+#    #+#             */
-/*   Updated: 2014/11/09 17:20:16 by mdelage          ###   ########.fr       */
+/*   Created: 2014/05/18 21:38:00 by mdelage           #+#    #+#             */
+/*   Updated: 2014/05/18 21:38:44 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int		ft_atoi(char *str)
+size_t	ft_putstr_fd_c(char *s, int fd, char *color)
 {
-	int		i;
-	int		result;
-	int		symbol;
+	size_t	len;
 
-	i = 0;
-	result = 0;
-	symbol = 1;
-	while ((str[i] == ' ' || (str[i] >= 9 && str[i] <= 13)) && str[i] != '\0')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	len = 0;
+	if (s != NULL)
 	{
-		symbol = (str[i] == '-') ? -1 : 1;
-		i++;
+		ft_putstr_fd(color, fd);
+		len = ft_putstr_fd(s, fd);
+		ft_putstr_fd(NORMAL, fd);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + str[i] - 48;
-		i++;
-	}
-	return (result * symbol);
+	return (len);
 }

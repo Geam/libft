@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 17:20:12 by mdelage           #+#    #+#             */
-/*   Updated: 2014/05/14 21:31:52 by mdelage          ###   ########.fr       */
+/*   Updated: 2015/01/21 22:49:06 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elemt));
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
@@ -73,11 +74,13 @@ size_t				ft_putchar_fd(char c, int fd);
 size_t				ft_putendl(char const *s);
 size_t				ft_putendl_c(char *s, char *color);
 size_t				ft_putendl_fd(char const *s, int fd);
+size_t				ft_putendl_fd_c(char *s, int fd, char *color);
 size_t				ft_putnbr(long n);
 size_t				ft_putnbr_fd(long n, int fd);
 size_t				ft_putstr(char const *s);
 size_t				ft_putstr_c(char *s, char *color);
 size_t				ft_putstr_fd(char const *s, int fd);
+size_t				ft_putstr_fd_c(char *s, int fd, char *color);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);

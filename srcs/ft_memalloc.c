@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 12:42:23 by mdelage           #+#    #+#             */
-/*   Updated: 2013/11/26 14:18:03 by mdelage          ###   ########.fr       */
+/*   Updated: 2015/01/22 13:07:48 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,13 @@ void	*ft_memalloc(size_t size)
 
 	i = 0;
 	temp = (unsigned char*)malloc(sizeof(*temp) * size);
-	while (i < size)
+	if (temp)
 	{
-		temp[i] = '\0';
-		i++;
+		while (i < size)
+		{
+			temp[i] = '\0';
+			i++;
+		}
 	}
 	return (temp);
 }

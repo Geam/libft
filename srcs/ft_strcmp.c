@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 15:14:35 by mdelage           #+#    #+#             */
-/*   Updated: 2014/03/05 20:29:41 by mdelage          ###   ########.fr       */
+/*   Updated: 2015/01/21 23:00:37 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_strcmp(const char *s1, const char *s2)
 	{
 		while (s1[i] == s2[i] && s1[i])
 			i++;
-		return (s1[i] - s2[i]);
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	}
 	return (0);
 }

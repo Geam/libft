@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 18:26:51 by mdelage           #+#    #+#             */
-/*   Updated: 2014/03/05 20:30:05 by mdelage          ###   ########.fr       */
+/*   Updated: 2015/01/26 18:40:47 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,25 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	ssrc;
-	size_t	sdest;
-	size_t	i;
+	char	*cur;
+	char	*reader;
+	size_t	len;
 
-	i = 0;
+	len = 0;
 	if (src != NULL && dest != NULL)
 	{
-		ssrc = ft_strlen(src);
-		sdest = ft_strlen(dest);
-		if (sdest > size)
-			return (ssrc + size);
-		while (src[i])
+		cur = (char *)ft_memchr(dest, '\0', size);
+		if (cur == NULL)
+			return (size + ft_strlen(src));
+		reader = (char *)src;
+		len = (size_t)(cur - dest) + ft_strlen(reader);
+		while ((size_t)(cur - dest) < size - 1 && *reader != '\0')
 		{
-			if (sdest + i < size - 1)
-				dest[sdest + i] = src[i];
-			else
-				dest[sdest + i] = '\0';
-			i++;
+			*cur = *reader;
+			cur++;
+			reader++;
 		}
-		dest[sdest + i] = '\0';
-		return (sdest + i);
+		*cur = '\0';
 	}
-	return (0);
+	return (len);
 }
