@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/30 17:20:12 by mdelage           #+#    #+#             */
-/*   Updated: 2015/01/21 22:49:06 by mdelage          ###   ########.fr       */
+/*   Updated: 2015/02/20 16:18:56 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,22 @@
 /*
 ** Definition of keyword for color used in ft_put[...]_c
 */
-# define NORMAL "\x1B[0m"
-# define RED "\x1B[31m"
-# define GREEN "\x1B[32m"
-# define YELLOW "\x1B[33m"
-# define WHITE "\x1B[37m"
-# define BLUE "\x1B[0;34m"
-# define BROWN "\x1B[0;33m"
-# define CYAN "\x1B[0;36m"
-# define GRAY "\x1B[1;30m"
-# define PURPLE "\x1B[0;35m"
-# define LIGHT_BLUE "\x1B[1;34m"
-# define LIGHT_CYAN "\x1B[1;36m"
-# define LIGHT_GRAY "\x1B[0;37m"
-# define LIGHT_GREEN "\x1B[1;32m"
-# define LIGHT_PURPLE "\x1B[1;35m"
-# define LIGHT_RED "\x1B[1;31m"
+# define NORMAL "\e[0m"
+# define RED "\e[0;31m"
+# define GREEN "\e[0;32m"
+# define YELLOW "\e[0;33m"
+# define WHITE "\e[0;37m"
+# define BLUE "\e[0;34m"
+# define BROWN "\e[0;33m"
+# define CYAN "\e[0;36m"
+# define GRAY "\e[1;30m"
+# define PURPLE "\e[0;35m"
+# define LIGHT_BLUE "\e[1;34m"
+# define LIGHT_CYAN "\e[1;36m"
+# define LIGHT_GRAY "\e[0;37m"
+# define LIGHT_GREEN "\e[1;32m"
+# define LIGHT_PURPLE "\e[1;35m"
+# define LIGHT_RED "\e[1;31m"
 
 typedef struct		s_list
 {
@@ -69,6 +69,7 @@ void				*ft_memcpy(void *dest, void const *src, size_t n);
 void				ft_memdel(void **ap);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
+int					ft_nbrlen(long n);
 size_t				ft_putchar(char c);
 size_t				ft_putchar_fd(char c, int fd);
 size_t				ft_putendl(char const *s);
