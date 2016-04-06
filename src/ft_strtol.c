@@ -7,17 +7,18 @@ static long int ft_strtol_sub(const char *nptr, char **endptr, char sign)
 	unsigned long int	n2;
 
 	n = 0;
+	n2 = 0;
 	while (ft_isdigit(**endptr))
 	{
-		n2 = (unsigned long int)n * 10 + **endptr + '0';
+		n2 = n2 * 10 + **endptr - '0';
 		if (n2 > LONG_MAX)
 		{
 			*endptr = (char *)nptr;
 			return (0);
 		}
-		n = (long int)n2;
 		++(*endptr);
 	}
+	n = (long int)n2;
 	if (sign == -1)
 		n = -n;
 	return (n);
