@@ -10,8 +10,8 @@
 #                                                                              #
 #******************************************************************************#
 
-CPATH = srcs
-HPATH = includes
+CPATH = src
+HPATH = include
 OPATH = obj
 
 CC = /usr/bin/gcc
