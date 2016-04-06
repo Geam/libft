@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 19:02:43 by mdelage           #+#    #+#             */
-/*   Updated: 2014/11/09 17:20:16 by mdelage          ###   ########.fr       */
+/*   Updated: 2016/04/06 13:41:50 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int		ft_atoi(char *str)
 		return (0);
 	else if (n < 0 && n < INT_MIN)
 		return (0);
-	return ((int) n);
+	return ((int)n);
 }

@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtol.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/04/06 13:42:40 by mdelage           #+#    #+#             */
+/*   Updated: 2016/04/06 13:43:07 by mdelage          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <limits.h>
 #include "libft.h"
 
-static long int ft_strtol_sub(const char *nptr, char **endptr, char sign)
+static long int	ft_strtol_sub(const char *nptr, char **endptr, char sign)
 {
 	long int			n;
 	unsigned long int	n2;
@@ -24,7 +36,7 @@ static long int ft_strtol_sub(const char *nptr, char **endptr, char sign)
 	return (n);
 }
 
-long int	ft_strtol(const char *nptr, char **endptr)
+long int		ft_strtol(const char *nptr, char **endptr)
 {
 	char	sign;
 

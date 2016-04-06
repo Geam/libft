@@ -6,7 +6,7 @@
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/03/19 16:03:32 by mdelage           #+#    #+#             */
-/*   Updated: 2014/03/19 16:05:26 by mdelage          ###   ########.fr       */
+/*   Updated: 2016/04/06 13:42:23 by mdelage          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ size_t	ft_tablen(char **tab)
 	if (tab)
 	{
 		while (*tab)
-        {
+		{
 			++len;
-            ++tab;
-        }
+			++tab;
+		}
 	}
 	return (len);
 }
