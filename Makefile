@@ -54,6 +54,7 @@ SRC = ft_atoi.c \
 	ft_memmove.c \
 	ft_memset.c \
 	ft_nbrlen.c \
+	ft_nothing.c \
 	ft_putchar.c \
 	ft_putchar_fd.c \
 	ft_putendl.c \
