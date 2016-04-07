@@ -16,7 +16,7 @@ int		ft_nbrlen(long n)
 {
 	int		count;
 
-	count = 1;
+	count = (n < 0) ? 2 : 1;
 	while (n /= 10)
 		count++;
 	return (count);

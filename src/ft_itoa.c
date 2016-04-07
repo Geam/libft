@@ -11,20 +11,9 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-static int	ft_n_size(long n, int size)
-{
-	if (n < 0)
-	{
-		size++;
-		n *= -1;
-	}
-	if (n >= 10)
-		size = ft_n_size(n / 10, size);
-	return (size + 1);
-}
-
-static int	ft_fill_nbr(long n, char *text, int i)
+int			ft_fillnbr(long n, char *text, int i)
 {
 	if (n < 0)
 	{
@@ -33,7 +22,7 @@ static int	ft_fill_nbr(long n, char *text, int i)
 		n *= -1;
 	}
 	if (n >= 10)
-		i = ft_fill_nbr(n / 10, text, i);
+		i = ft_fillnbr(n / 10, text, i);
 	text[i] = n % 10 + '0';
 	return (i + 1);
 }
@@ -44,11 +33,11 @@ char		*ft_itoa(int n)
 	char	*text;
 	int		ret;
 
-	size = ft_n_size((long)n, 1);
+	size = ft_nbrlen(n);
 	text = (char *)malloc(sizeof(char) * (size + 1));
 	if (text)
 	{
-		ret = ft_fill_nbr((long)n, text, 0);
+		ret = ft_fillnbr((long)n, text, 0);
 		text[ret] = '\0';
 		return (text);
 	}

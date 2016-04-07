@@ -54,6 +54,7 @@ typedef struct		s_list_head
 int					ft_atoi(char *str);
 void				ft_bzero(void *s, size_t n);
 char				**ft_dup_tab(char **tab);
+int					ft_fillnbr(long n, char *text, int i);
 void				ft_free_tab(char ***tab);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
