@@ -13,19 +13,19 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+void	ft_lstdel(t_list_head *head, void (*del)(void *))
 {
 	t_list	*temp;
-	t_list	*temp_old;
+	t_list	*temp_next;
 
-	temp_old = *alst;
-	while (temp_old != NULL)
+	temp = head->first;
+	while (temp != NULL)
 	{
-		temp = temp_old->next;
-		del(temp_old->content, temp_old->content_size);
-		free(temp_old);
-		temp_old = temp;
+		temp_next = temp->next;
+		del(temp->content);
+		free(temp);
+		temp = temp_next;
 	}
-	*alst = NULL;
+	ft_bzero(head, sizeof(t_list_head));
 	return ;
 }
