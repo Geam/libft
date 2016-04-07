@@ -82,6 +82,7 @@ void				ft_memdel(void **ap);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
 int					ft_nbrlen(long n);
+void				ft_nothing(void *e);
 size_t				ft_putchar(char c);
 size_t				ft_putchar_fd(char c, int fd);
 size_t				ft_putendl(char const *s);
