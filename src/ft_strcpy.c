@@ -25,7 +25,7 @@ char	*ft_strcpy(char *dest, const char *src)
 			i++;
 		}
 		dest[i] = '\0';
-		return (dest);
+		return (dest + i);
 	}
 	return (NULL);
 }
