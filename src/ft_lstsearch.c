@@ -23,7 +23,7 @@ void	*ft_lstsearch(t_list_head *head, int (*search)(void *, void *),
 	if (head->first)
 	{
 		temp = head->first;
-		while (temp && !search(temp, match))
+		while (temp && !search(temp->content, match))
 			temp = temp->next;
 		if (temp)
 			ret = temp->content;
