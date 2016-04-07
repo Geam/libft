@@ -69,6 +69,8 @@ int					ft_lstinit(t_list_head **head, int new);
 void				ft_lstiter(t_list_head *head, void (*f)(void *));
 t_list_head			*ft_lstmap(t_list_head *lst, t_list *(*f)(t_list *));
 t_list				*ft_lstnew(void const *content, size_t content_size);
+void				*ft_lstsearch(t_list_head *head,
+	int (*search)(void *, void *), void *match);
 int					ft_lstpushback(t_list_head *head, t_list *link);
 int					ft_lstpushfront(t_list_head *head, t_list *link);
 void				*ft_memalloc(size_t size);
