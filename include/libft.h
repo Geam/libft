@@ -67,6 +67,8 @@ void				ft_lstdel(t_list_head *head, void (*del)(void *));
 void				ft_lstdelone(t_list_head *head,
 	int (*search)(void *, void *), void *match, void (*del)(void *));
 int					ft_lstinit(t_list_head **head, int new);
+int					ft_lstinsert(t_list_head *head, t_list *to_insert,
+	int (*insert_here)(void *, void *));
 void				ft_lstiter(t_list_head *head, void (*f)(void *));
 t_list_head			*ft_lstmap(t_list_head *lst, t_list *(*f)(t_list *));
 t_list				*ft_lstnew(void *content, size_t content_size);

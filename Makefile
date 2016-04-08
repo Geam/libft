@@ -39,6 +39,7 @@ SRC = ft_atoi.c \
 	ft_lstdel.c \
 	ft_lstdelone.c \
 	ft_lstinit.c \
+	ft_lstinsert.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 	ft_lstnew.c \
