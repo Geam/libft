@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpopfirst                                     :+:      :+:    :+:   */
+/*   ft_lstpopfront                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdelage <mdelage@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void	*ft_lstpopfirst(t_list_head *head)
+void	*ft_lstpopfront(t_list_head *head)
 {
 	t_list	*temp;
 	void	*content;

@@ -42,8 +42,8 @@ SRC = ft_atoi.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
 	ft_lstnew.c \
-	ft_lstpopfirst.c \
-	ft_lstpoplast.c \
+	ft_lstpopback.c \
+	ft_lstpopfront.c \
 	ft_lstpushback.c \
 	ft_lstpushfront.c \
 	ft_lstsearch.c \
