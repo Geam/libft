@@ -70,10 +70,12 @@ int					ft_lstinit(t_list_head **head, int new);
 void				ft_lstiter(t_list_head *head, void (*f)(void *));
 t_list_head			*ft_lstmap(t_list_head *lst, t_list *(*f)(t_list *));
 t_list				*ft_lstnew(void *content, size_t content_size);
-void				*ft_lstsearch(t_list_head *head,
-	int (*search)(void *, void *), void *match);
+void				*ft_lstpopfirst(t_list_head *head);
+void				*ft_lstpoplast(t_list_head *head);
 int					ft_lstpushback(t_list_head *head, t_list *link);
 int					ft_lstpushfront(t_list_head *head, t_list *link);
+void				*ft_lstsearch(t_list_head *head,
+	int (*search)(void *, void *), void *match);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
