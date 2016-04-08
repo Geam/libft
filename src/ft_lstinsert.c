@@ -7,10 +7,10 @@ int		ft_lstinsert(t_list_head *head, t_list *to_insert,
 
 	if (!head || !to_insert)
 		return (1);
-	if (!head->first || insert_here(to_insert->content, head->first->content))
+	if (!head->first || insert_here(head->first->content, to_insert->content))
 		return (ft_lstpushfront(head, to_insert));
 	temp = head->first;
-	while (temp->next && !insert_here(to_insert->content, temp->next->content))
+	while (temp->next && !insert_here(temp->next->content, to_insert->content))
 		temp = temp->next;
 	if (!temp->next)
 		head->last = to_insert;
