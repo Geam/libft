@@ -66,7 +66,7 @@ char				*ft_itoa(int n);
 void				ft_lstdel(t_list_head *head, void (*del)(void *));
 void				ft_lstdelone(t_list_head *head,
 	int (*search)(void *, void *), void *match, void (*del)(void *));
-int					ft_lstinit(t_list_head **head, int new);
+int					ft_lstinit(t_list_head **head, size_t head_size);
 int					ft_lstinsert(t_list_head *head, t_list *to_insert,
 	int (*insert_here)(void *, void *));
 void				ft_lstiter(t_list_head *head, void (*f)(void *));
@@ -108,6 +108,7 @@ char				*ft_strcpy(char *dest, const char *src);
 void				ft_strdel(char **as);
 char				*ft_strdup(const char *s);
 int					ft_strequ(char const *s1, char const *s2);
+unsigned long		ft_strhash(char *str);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);

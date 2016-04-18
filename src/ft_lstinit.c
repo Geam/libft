@@ -13,11 +13,13 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int		ft_lstinit(t_list_head **head, int new)
+int		ft_lstinit(t_list_head **head, size_t head_size)
 {
-	if (new)
+	if (head_size)
 	{
-		if (!(*head = (t_list_head *)malloc(sizeof(t_list_head))))
+		head_size = (head_size < sizeof(t_list_head)) ? sizeof(t_list_head) :
+			head_size;
+		if (!(*head = (t_list_head *)malloc(head_size)))
 			return (1);
 	}
 	ft_bzero(*head, sizeof(t_list_head));
